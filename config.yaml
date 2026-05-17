@@ -10,7 +10,7 @@ timeframe: "1h"
 
 # API keys for permanent reliable data (yfinance is free but rate-limited)
 # Get a free key at: https://twelvedata.com/
-twelvedata_api_key: ""
+twelvedata_api_key: "c43f8f2b7ebc4b7f90f86a58245dfbf8"
 
 # How many hours ahead to predict (1 = next candle)
 forecast_horizon: 4

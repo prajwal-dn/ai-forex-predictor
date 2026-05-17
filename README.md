@@ -50,7 +50,15 @@ By automating the complex analysis of historical data, technical indicators, and
 
 ---
 
-## 🛠️ Installation & Setup
+## 🌐 Live Deployment
+You can access the live, cloud-hosted version of the Forex Predictor PRO dashboard here:
+👉 **[Live AI Dashboard](https://praj-9035-ai-forex-predictor.hf.space)**
+
+---
+
+## 🛠️ Local Installation & Development
+
+*(If you want to run the code locally on your own computer instead of using the live link above)*
 
 ### 1. Install Dependencies
 Ensure you have Python 3.9+ installed, then run:
@@ -76,8 +84,8 @@ Run the automated pipeline to download data, engineer features, and train the op
 python src/retrain.py
 ```
 
-### 4. Launch the Dashboard
-Start the local web server to access the trading interface:
+### 4. Launch the Local Dashboard
+Start the local web server to access the trading interface on your own machine:
 ```bash
 python app.py
 ```
