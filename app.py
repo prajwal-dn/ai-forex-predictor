@@ -249,7 +249,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    print(f"\n Forex Predictor Dashboard")
+    print(f"\n Asset Predictor Dashboard")
     print(f" Open this in your browser: http://localhost:{PORT}\n")
     server = HTTPServer(("", PORT), Handler)
     server.serve_forever()

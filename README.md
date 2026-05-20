@@ -1,5 +1,5 @@
 ---
-title: AI Forex Predictor PRO
+title: AI Asset Predictor PRO
 emoji: 📈
 colorFrom: blue
 colorTo: green
@@ -8,7 +8,7 @@ pinned: false
 app_port: 7860
 ---
 
-# Forex Predictor PRO 📈
+# Asset Predictor PRO 📈
 
 <div align="center">
   <p><strong>An advanced, AI-powered trading workstation for the Foreign Exchange market.</strong></p>
@@ -24,7 +24,7 @@ app_port: 7860
 
 ## 🚀 Overview
 
-**Forex Predictor PRO** is a professional-grade quantitative trading tool. It leverages state-of-the-art machine learning algorithms and technical analysis to predict short-term price movements in Forex markets. 
+**Asset Predictor PRO** is a professional-grade quantitative trading tool. It leverages state-of-the-art machine learning algorithms and technical analysis to predict short-term price movements in Forex markets. 
 
 By automating the complex analysis of historical data, technical indicators, and multi-timeframe trends, it provides traders with clear, actionable signals (**BUY**, **SELL**, or **FLAT**) alongside calculated risk management protocols.
 
@@ -51,7 +51,7 @@ By automating the complex analysis of historical data, technical indicators, and
 ---
 
 ## 🌐 Live Deployment
-You can access the live, cloud-hosted version of the Forex Predictor PRO dashboard here:
+You can access the live, cloud-hosted version of the Asset Predictor PRO dashboard here:
 👉 **[Live AI Dashboard](https://praj-9035-ai-forex-predictor.hf.space)**
 
 ---

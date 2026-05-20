@@ -168,7 +168,7 @@ def print_signal(result: dict, cfg: dict):
     stop_size = result["atr"] * atr_mult
 
     print("\n==============================================")
-    print(f"FOREX PREDICTOR - {pair}")
+    print(f"ASSET PREDICTOR - {pair}")
     print("----------------------------------------------")
     print(f"Time      : {result['timestamp'][:16]}")
     print(f"Close     : {result['close']:.5f}")
