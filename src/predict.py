@@ -76,8 +76,9 @@ def fetch_recent_data(pair: str, timeframe: str, cfg: dict) -> pd.DataFrame:
     if api_key:
         # Use TwelveData (Professional Permanent Fix)
         # Convert Yahoo pair (EURUSD=X) to TwelveData format (EUR/USD)
-        td_pair = pair.replace("=X", "")
-        if len(td_pair) == 6: td_pair = f"{td_pair[:3]}/{td_pair[3:]}"
+        td_pair = pair.replace("=X", "").replace("-", "/")
+        if "/" not in td_pair and len(td_pair) == 6:
+            td_pair = f"{td_pair[:3]}/{td_pair[3:]}"
         
         td_interval_map = {
             "1d": "1day",

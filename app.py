@@ -34,12 +34,19 @@ def load_app_config():
     model_dir = cfg["paths"]["models"]
     model_exists = os.path.exists(os.path.join(model_dir, f"{pair_key}_xgboost.pkl"))
 
+    # Determine TradingView symbol based on asset class (crypto contains hyphen)
+    tv_symbol = pair_code.replace("-", "")
+    if "-" in pair:
+        tradingview_symbol = f"COINBASE:{tv_symbol}"
+    else:
+        tradingview_symbol = f"FX:{tv_symbol}"
+
     return {
         "pair": pair,
         "pair_code": pair_code,
         "timeframe": timeframe,
         "forecast_horizon": horizon,
-        "tradingview_symbol": f"FX:{pair_code}",
+        "tradingview_symbol": tradingview_symbol,
         "tradingview_interval": interval_map.get(timeframe, "60"),
         "model_exists": model_exists,
     }
@@ -219,8 +226,8 @@ class Handler(BaseHTTPRequestHandler):
             if not new_pair:
                 self.send_json({"error": "No pair provided"}, 400)
                 return
-            # Normalise: "EURUSD" → "EURUSD=X", already "EURUSD=X" stays
-            if not new_pair.endswith("=X"):
+            # Normalise: "EURUSD" -> "EURUSD=X", but keep "BTC-USD" or symbols that already have "=X"
+            if "-" not in new_pair and not new_pair.endswith("=X") and len(new_pair) == 6:
                 new_pair = new_pair + "=X"
             save_pair_to_config(new_pair)
             cfg = load_app_config()
