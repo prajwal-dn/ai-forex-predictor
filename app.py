@@ -38,7 +38,7 @@ def load_app_config():
     tv_symbol = pair_code.replace("-", "")
     if "-" in pair:
         tradingview_symbol = f"COINBASE:{tv_symbol}"
-    elif "INRUSD" in pair_code or "USDINR" in pair_code:
+    elif tv_symbol in ("INRUSD", "USDINR"):
         tradingview_symbol = f"FX_IDC:{tv_symbol}"
     else:
         tradingview_symbol = f"FX:{tv_symbol}"
